@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Translated{% endblock %} {% block
+content %}
+<h1 align="center" class="display-md-3 display-4">Translated Text</h1>
+<br />
+<div align="center">
+  <div id="printArea">
+    <textarea name="translated" class="form-control" cols="30" rows="3">
+  {{words}}</textarea
+    >
+  </div>
+  <br />
+  <a href="/" class="btn btn-primary">Go Back</a>
+  <button class="btn btn-primary" onclick="report()">Print Report</button>
+</div>
+{% endblock %}

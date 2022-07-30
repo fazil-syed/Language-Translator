@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block title %}Translate{% endblock %} {% block
+content %}
+<h1 align="center" class="display-3">Translater</h1>
+<br />
+<form method="POST" align="center">
+  <div class="row justify-content-md-center">
+    <div class="col-md-3 mr-lg-3">
+      <h2>Select input language</h2>
+      <select name="input_lang" class="form-control">
+        <option value="english">English</option>
+        <option value="kannada">Kannada</option>
+        <option value="russian">Russian</option>
+        <option value="french">French</option>
+        <option value="telugu">Telugu</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <img
+        src="static/images/voice-search.png"
+        alt="voice-search"
+        width="50px"
+        id="voice-search"
+        onclick="recognize()"
+      />
+    </div>
+    <div class="col-md-3 ml-lg-3">
+      <h2>Select output language</h2>
+      <select name="output_lang" class="form-control">
+        <option value="english">English</option>
+        <option value="kannada">Kannada</option>
+        <option value="russian">Russian</option>
+        <option value="french">French</option>
+        <option value="telugu">Telugu</option>
+      </select>
+    </div>
+  </div>
+  <br />
+  <textarea
+    name="input_text"
+    id="input_text"
+    cols="30"
+    rows="3"
+    class="form-control"
+  ></textarea>
+  <br />
+  <div align="center">
+    <input type="submit" value="Translate" class="btn btn-primary" />
+  </div>
+</form>
+{% endblock %}

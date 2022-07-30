@@ -1,0 +1,31 @@
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#mainNavbar .nav-link {
+    color: rgb(252, 241, 241);
+}
+
+#mainNavbar .nav-link:hover {
+    color: #b4a4a4;
+}
+
+@media (max-width: 500px) {
+    #flex {
+        display: flexbox;
+    }
+
+    #voice-search {
+        width: 50px;
+        justify-content: center;
+        align-self: center;
+    }
+}
+
+
+.printing {
+    font-size: 3em !important;
+    line-height: 1.1em !important;
+    font-weight: 900 !important;
+}

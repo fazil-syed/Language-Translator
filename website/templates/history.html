@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %}Translate{% endblock %} {% block
+content %}
+<h1 align="center">History</h1>
+<ul class="list-group list-group-flush" id="history">
+  {% for history in user.history %}
+  <li class="list-group-item">
+    {{ history.data }}
+    <button
+      type="button"
+      class="close"
+      onClick="deleteHistory({{ history.id }})"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li>
+  <br />
+  {% endfor %}
+</ul>
+{% endblock %}
