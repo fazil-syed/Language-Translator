@@ -1,4 +1,4 @@
-from flask import Blueprint, flash, render_template, request,jsonify
+from flask import Blueprint, flash, render_template, request, jsonify
 from flask_login import login_required, current_user
 import json
 from website.models import History
@@ -25,10 +25,17 @@ def home():
             return render_template('translated.html', words=words, user=current_user)
     return render_template('home.html', user=current_user)
 
+
 @views.route('/history',)
 @login_required
 def history():
     return render_template('history.html', user=current_user)
+
+
+@views.route('/about-us',)
+def aboutus():
+    return render_template('aboutus.html', user=current_user)
+
 
 @views.route('/delete-history', methods=['POST'])
 def delete_history():
