@@ -11,7 +11,7 @@ def create_app():
     app.config['SECRET_KEY'] = 'Hospet'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
-    
+
     db.init_app(app)
 
     from .views import views
@@ -22,7 +22,7 @@ def create_app():
 
     from .models import User
 
-    create_database(app)
+    # create_database(app)
 
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
